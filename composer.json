@@ -1,0 +1,50 @@
+{
+    "name": "mijingo/liefer",
+    "description": "Consumes JSON and makes it available in your Twig templates.",
+    "type": "craft-plugin",
+    "version": "0.0.1",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "liefer"
+    ],
+    "support": {
+        "docs": "https://github.com/mijingo/liefer/blob/master/README.md",
+        "issues": "https://github.com/mijingo/liefer/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mijingo",
+            "homepage": "https://mijingo.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+          "mijingo\\liefer\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Liefer",
+        "handle": "liefer",
+        "schemaVersion": "0.0.1",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/mijingo/liefer/master/CHANGELOG.md",
+        "components": {
+            "lieferService": "mijingo\\liefer\\services\\LieferService"
+        },
+        "class": "mijingo\\liefer\\Liefer"
+    }
+}
