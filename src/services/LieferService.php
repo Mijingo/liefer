@@ -2,7 +2,7 @@
 /**
  * Liefer plugin for Craft CMS 3.x
  *
- * TBD
+ * a desc
  *
  * @link      https://mijingo.com
  * @copyright Copyright (c) 2017 Mijingo
@@ -43,10 +43,20 @@ class LieferService extends Component
      *
      * @return mixed
      */
-    public function exampleService()
+    public function get($options = [])
     {
-        $result = 'something';
+        if ( isset($options['url']) ) {
+            return $this->_fetchData($options['url']);
+        }
+        else {
+            return;
+        }
+    }
 
-        return $result;
+    private function _fetchData($url) {
+        $json = file_get_contents($url);
+        $array = json_decode($json, true);
+        return $array['data'];
+
     }
 }

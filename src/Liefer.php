@@ -2,7 +2,7 @@
 /**
  * Liefer plugin for Craft CMS 3.x
  *
- * TBD
+ * a desc
  *
  * @link      https://mijingo.com
  * @copyright Copyright (c) 2017 Mijingo
@@ -11,12 +11,14 @@
 namespace mijingo\liefer;
 
 use mijingo\liefer\services\LieferService as LieferServiceService;
+use mijingo\liefer\variables\LieferVariable;
 
 use Craft;
 use craft\base\Plugin;
 use craft\services\Plugins;
 use craft\events\PluginEvent;
 use craft\web\UrlManager;
+use craft\web\twig\variables\CraftVariable;
 use craft\events\RegisterUrlRulesEvent;
 
 use yii\base\Event;
@@ -84,6 +86,17 @@ class Liefer extends Plugin
             UrlManager::EVENT_REGISTER_CP_URL_RULES,
             function (RegisterUrlRulesEvent $event) {
                 $event->rules['cpActionTrigger1'] = 'liefer/default/do-something';
+            }
+        );
+
+        // Register our variables
+        Event::on(
+            CraftVariable::class,
+            CraftVariable::EVENT_INIT,
+            function (Event $event) {
+                /** @var CraftVariable $variable */
+                $variable = $event->sender;
+                $variable->set('liefer', LieferVariable::class);
             }
         );
 

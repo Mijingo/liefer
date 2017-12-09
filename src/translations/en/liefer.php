@@ -2,7 +2,7 @@
 /**
  * Liefer plugin for Craft CMS 3.x
  *
- * TBD
+ * a desc
  *
  * @link      https://mijingo.com
  * @copyright Copyright (c) 2017 Mijingo
