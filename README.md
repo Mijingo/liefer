@@ -41,3 +41,4 @@ Some things to do, and ideas for potential features:
 * Release it
 
 Brought to you by [Mijingo](https://mijingo.com)
+JSON File by useiconic.com from the Noun Project
