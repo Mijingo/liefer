@@ -2,7 +2,7 @@
     "name": "mijingo/liefer",
     "description": "Consumes JSON and makes it available in your Twig templates.",
     "type": "craft-plugin",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "keywords": [
         "craft",
         "cms",
